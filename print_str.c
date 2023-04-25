@@ -2,7 +2,7 @@
 
 /**
  * print_str - function that prints a string
- * @manu: parameter for variadic
+ * @grp: parameter for variadic
  *
  * Return: number of characters printed
  */
