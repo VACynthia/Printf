@@ -7,13 +7,13 @@
  * Return: number of characters printed
  */
 
-int print_str(va_list manu)
+int print_str(va_list grp)
 {
 	int j, value;
 	int count = 0;
 	char *str;
 
-	str = va_arg(manu, char *);
+	str = va_arg(grp, char *);
 	if (str == NULL)
 		return (-1);
 

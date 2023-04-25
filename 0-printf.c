@@ -11,10 +11,10 @@
 int _printf(const char *format, ...)
 {
 	int i = 0, count = 0, value = 0;
-	va_list manu;
+	va_list grp;
 	int (*z)(va_list);
 
-	va_start(manu, format);
+	va_start(grp, format);
 	if (format == NULL)
 		return (-1); /*Function stops*/
 	while (format[i])
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		{
 			z = scan_spec(&format[i + 1]);
 			if (z != NULL)
-				value = z(manu);
+				value = z(grp);
 				count += value;
 				i += 2;
 				continue;
