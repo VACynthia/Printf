@@ -14,7 +14,7 @@ int print_char(va_list grp)
 
 	if (j)
 	{
-		count = write(1, &c, 1);
+		count = write(1, &j, 1);
 		return (count);
 	}
 	return (0);
