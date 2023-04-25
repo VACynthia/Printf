@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * print_str - function that prints a string
@@ -21,7 +22,7 @@ int print_str(va_list grp)
 	{
 		write(1, &str[j], 1);
 		j++;
-		count = sizeof(str) - 1;
+		count = strlen(str);
 	}
 	return (count);
 }
