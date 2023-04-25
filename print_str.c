@@ -9,7 +9,7 @@
 
 int print_str(va_list grp)
 {
-	int j;
+	int j = 0;
 	int count = 0;
 	char *str;
 
