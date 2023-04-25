@@ -18,11 +18,12 @@ int print_str(va_list grp)
 	if (str == NULL)
 		return (-1);
 
-	while (str[j])
+	while (str[j] != '\0')
 	{
 		write(1, &str[j], 1);
 		j++;
+		count++;
 	}
-	count = strlen(str);
+
 	return (count);
 }
