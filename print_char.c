@@ -10,12 +10,5 @@
 int print_char(va_list grp)
 {
 	char j = (char)va_arg(grp, int);
-	int count = 0;
-
-	if (j)
-	{
-		count = write(1, &j, 1);
-		return (count);
-	}
-	return (0);
+	return (write(1, &j, 1));
 }
