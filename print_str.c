@@ -22,7 +22,7 @@ int print_str(va_list grp)
 	{
 		write(1, &str[j], 1);
 		j++;
-		count = strlen(str);
+		count = strlen(str) - 1;
 	}
 	return (count);
 }
