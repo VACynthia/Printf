@@ -15,6 +15,7 @@ int print_char(va_list grp)
 	if (j)
 	{
 		count = write(1, &j, 1);
+		j++;
 		return (count);
 	}
 	return (0);

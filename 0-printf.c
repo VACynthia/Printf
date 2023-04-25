@@ -48,6 +48,7 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
+	va_end(grp);
 	return (count);
 }
 
