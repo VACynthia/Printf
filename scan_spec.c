@@ -11,7 +11,7 @@
 int (*scan_spec(const char *format))(va_list)
 {
 	int i;
-	cal_t our_array[4] = {
+	cal_t our_array[] = {
 		{"c", print_char},
 		{"s", print_str},
 		{"%", print_cent},
