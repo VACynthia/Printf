@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 
 int print_cent(va_list grp)
 {
-	(void)manu;
+	(void)grp;
 
 	write(1, "%", 1);
 	return (1);
