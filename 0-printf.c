@@ -29,17 +29,16 @@ int _printf(const char *format, ...)
 		{
 			z = scan_spec(&format[i + 1]);
 			if (z != NULL)
+			{
 				value = z(grp);
 				count += value;
 				i += 2;
 				continue;
-			if (format[i + 1] == '%')
-				write(1, "%", 1);
-				i += 2;
-				count++;
-				continue;
+			}
 			if (format[i + 1] == '\0')
+			{
 				break;
+			}
 			if (format[i + 1] != '\0')
 			{
 				value = write(1, (&format[i + 1]), 1);
@@ -50,4 +49,19 @@ int _printf(const char *format, ...)
 		}
 	}
 	return (count);
+}
+
+/**
+ * print_cent - prints the character %
+ * @grp: variadic specifier
+ *
+ * Return: number of characters printed
+ */
+
+int print_cent(va_list grp)
+{
+	(void)manu;
+
+	write(1, "%", 1);
+	return (1);
 }

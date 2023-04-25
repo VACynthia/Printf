@@ -1,26 +1,21 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-#include <stdio.h>
-#include <unistd.h>
-#include <stdarg.h>
-#include <stdlib.h>
-
-int _printf(const char *format, ...);
-int (*scan_spec(const char *format))(va_list);
+#include "main.h"
 
 /**
- * struct cal - struct for specifier to printer
- * @m: character to compare
- * @z: pointer to handle printing
+ * print_char - prints a character
+ * @grp:variadic parameter
+ *
+ * Return: number of characters printed
  */
-typedef struct cal
+
+int print_char(va_list grp)
 {
-	char *m;
-	int (*z)(va_list);
-} cal_t;
+	char j = (char)va_arg(grp, int);
+	int count = 0;
 
-int print_char(va_list);
-int print_str(va_list);
-
-#endif
+	if (j)
+	{
+		count = write(1, &c, 1);
+		return (count);
+	}
+	return (0);
+}
