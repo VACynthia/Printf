@@ -25,12 +25,12 @@ int print_dec(va_list grp)
 		digit = digit / 10;
 		if (digit == 0)
 			break;
-			n++;
+		n++;
 	}
-	for (n ; n >= 0; n--)
+	for (; n >= 0; n--)
 	{
 	/* convert integers to characters */
-		k[0] = ('0' + our_array[n];
+		k[0] = ('0' + our_array[n]);
 	/* write function only takes integers */
 		count += write(1, k, 1);
 	}
